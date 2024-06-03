@@ -1,18 +1,14 @@
 import { Engine } from "excalibur";
-import { Player } from "./player";
-import { loader } from "./resources";
+import { welcomeScenes } from "./welcomeScenes";
 
-class Game extends Engine {
-    constructor() {
-      super({width: 800, height: 600});
-    }
-    initialize() {
-      const player = new Player();
-      this.add(player);
+const game = new Engine({
+  width: 1200,
+  height: 800,
+  canvasElementId: "jogo"
+})
 
-      this.start(loader);
-    }
-  }
-  
-  export const game = new Game();
-  game.initialize();
+game.addScene("bemvindo", new welcomeScenes())
+
+game.start().then(() => {
+  game.goToScene("bemvindo")
+})
