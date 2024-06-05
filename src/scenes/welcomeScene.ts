@@ -1,5 +1,5 @@
 import { Actor, Color, Engine, FadeInOut, Font, Keys, Label, Scene, TextAlign, Transition, vec } from "excalibur";
-import { Resources } from "./resources";
+import { Resources } from "../resources";
 
 export class welcomeScenes extends Scene {
 
