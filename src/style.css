@@ -55,3 +55,35 @@
 
   line-height: 2;
 }
+
+.about_gamifica {
+  width: 500px;
+  height: 600px;
+
+  padding: 40px;
+  background-color: #fff;
+
+  border: solid 15px #cf5830;
+  border-radius: 30px;
+
+  color: black;
+  font-family: "Anta";
+
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.about_gamifica h2 {
+  margin-bottom: 40px;
+
+  font-size: 38px;
+  text-align: center;
+}              
+
+.about_gamifica p{
+  font-size: 20px;
+  text-align: justify;
+
+  line-height: 2;
+}
