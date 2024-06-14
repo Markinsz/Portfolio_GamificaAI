@@ -15,6 +15,9 @@ import tmxMapaPath from "./maps/mapa.tmx?url"
 import { TiledResource } from "@excaliburjs/plugin-tiled";
 
 import PlayerSpritePath from "./sprites/Player.png"
+import NPCaSpritePath from "./sprites/npc_a.png"
+import NPCbSpritePath from "./sprites/npc_b.png" 
+import NPCcSpritePath from "./sprites/npc_c.png" 
 
 export const Resources = {
   Sword: new ImageSource(sword),
@@ -22,6 +25,9 @@ export const Resources = {
   LogoV: new ImageSource(logoV),
   Control: new ImageSource (control),
   PlayerSpriteSheet: new ImageSource (PlayerSpritePath, {filtering: ImageFiltering.Pixel}),
+  NPCaSpriteSheet: new ImageSource(NPCaSpritePath, {filtering: ImageFiltering.Pixel}),
+  NPCbSpriteSheet: new ImageSource(NPCbSpritePath, {filtering: ImageFiltering.Pixel}),
+  NPCcSpriteSheet: new ImageSource(NPCcSpritePath, {filtering: ImageFiltering.Pixel}),
   Mapa: new TiledResource(tmxMapaPath, {
       pathMap: [
         {path: "mapa.tmx", output: tmxMapaPath},

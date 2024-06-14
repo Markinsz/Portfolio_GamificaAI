@@ -102,8 +102,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,9329,0,0,8339,0,0,0,9313,0,0,9307,0,0,0,9297,0,8921,8922,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,8355,0,0,0,0,0,0,9323,0,0,0,0,0,8937,8938,0,0,0,0,0,0,0,
+0,0,0,0,9329,0,0,0,0,0,0,9313,0,0,0,0,0,0,9297,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,10648,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,10664,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10383,0,0,0,0,
@@ -143,12 +143,12 @@
  </layer>
  <objectgroup id="7" name="ObjetosColisores">
   <object id="16" name="mesa_tabletenis" x="750.33" y="363.67" width="65.33" height="97.67"/>
-  <object id="17" name="mesa_stand_b" x="425.652" y="245.068" width="76.6667" height="37"/>
+  <object id="17" name="mesa_stand_b" x="425.652" y="245.068" width="76.6667" height="34.9091"/>
   <object id="18" name="mesa_pc_a" x="608" y="256.333" width="32.1212" height="32.1061"/>
   <object id="19" name="criado_mudo_a" x="576.333" y="238" width="32" height="37.6667"/>
   <object id="21" name="mesa_bilhar" x="560" y="374.667" width="128.333" height="68.6667"/>
-  <object id="22" name="mesa_stand_a" x="649.667" y="244.5" width="76.6667" height="37.0909"/>
-  <object id="24" name="mesa_stand_c" x="201.576" y="244.591" width="76.6667" height="37"/>
+  <object id="22" name="mesa_stand_a" x="649.667" y="244.5" width="76.6667" height="34.5909"/>
+  <object id="24" name="mesa_stand_c" x="201.576" y="244.591" width="76.6667" height="35.1818"/>
   <object id="25" name="mesa_pc_b" x="383.954" y="256.789" width="32.0445" height="31.2953"/>
   <object id="26" name="criado_mudo_b" x="352.458" y="238.417" width="32" height="37.6667"/>
   <object id="27" name="mesa_pc_c" x="160.091" y="256.182" width="31.8485" height="31.8338"/>
@@ -158,9 +158,7 @@
   <object id="31" name="vaso_planta" x="805.875" y="122.125" width="20.125" height="19.625"/>
   <object id="32" name="sofa" x="177.818" y="352" width="43.8182" height="62"/>
   <object id="33" name="hack_tv" x="100" y="351.818" width="19.55" height="56.5455"/>
-  <object id="34" x="146" y="339.091" width="0.181818"/>
   <object id="36" name="entrada" x="416" y="550.667" width="96" height="24.6667"/>
-  <object id="37" x="586" y="658"/>
  </objectgroup>
  <layer id="6" name="BlocosColisores" width="29" height="20" opacity="0" offsetx="138" offsety="100">
   <properties>
