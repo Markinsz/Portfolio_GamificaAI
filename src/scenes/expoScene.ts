@@ -1,4 +1,4 @@
-import { Actor, Animation, CollisionType, Color, Engine, FadeInOut, Graphic, Scene, SpriteSheet, Transition, vec } from "excalibur";
+import { Actor, CollisionType, Color, Engine, FadeInOut, Scene, Transition, vec } from "excalibur";
 import { Resources } from "../resources";
 import { Player } from "../actors/players";
 import { npc } from "../actors/npc";
@@ -14,8 +14,15 @@ export class expoScene extends Scene {
     }
     
     onInitialize(engine: Engine<any>): void {
-    // Modo debug
-    engine.toggleDebug()
+        // Modo debug
+        // engine.toggleDebug()
+
+        // Carregar bgm (background music)
+        let bgm = Resources.RitmadaBGM
+
+        // configurar musica
+        bgm.loop = true
+        bgm.play(0.5)
 
         // Carregar o mapa
         let tiledMap = Resources.Mapa
@@ -51,94 +58,20 @@ export class expoScene extends Scene {
 
         // configurar npc's
         let npcA = new npc(
-            vec(npcSpawnPointA.x + offsetX, npcSpawnPointA.y + offsetY),
-            "npcA"            
+            vec(npcSpawnPointA.x + offsetX, npcSpawnPointC.y + offsetY),
+            "npcA",
+            "a"
         )
-
-        const NPCaSpriteSheet = SpriteSheet.fromImageSource({
-            image: Resources.NPCaSpriteSheet,
-            grid: {
-                spriteWidth: 32,
-                spriteHeight: 64,
-                columns: 56,
-                rows: 20
-            },
-        })
-
-        const downIdleA = new Animation({
-            frames: [
-                { graphic: NPCaSpriteSheet.getSprite(18, 1) },
-                { graphic: NPCaSpriteSheet.getSprite(19, 1) },
-                { graphic: NPCaSpriteSheet.getSprite(20, 1) },
-                { graphic: NPCaSpriteSheet.getSprite(21, 1) },
-                { graphic: NPCaSpriteSheet.getSprite(22, 1) },
-                { graphic: NPCaSpriteSheet.getSprite(23, 1) },
-            ],
-            frameDuration: 150
-        })
-        npcA.graphics.add("down-idle-a", downIdleA)
-
-        npcA.graphics.use(downIdleA)
-
         let npcB = new npc(
             vec(npcSpawnPointB.x + offsetX, npcSpawnPointB.y + offsetY),
-            "npcB"
+            "npcB",
+            "b"         
         )
-
-        const NPCbSpriteSheet = SpriteSheet.fromImageSource({
-            image: Resources.NPCbSpriteSheet,
-            grid: {
-                spriteWidth: 32,
-                spriteHeight: 64,
-                columns: 56,
-                rows: 20
-            }, 
-        })
-
-        const downIdleB = new Animation({
-            frames: [
-                { graphic: NPCbSpriteSheet.getSprite(18, 1) },
-                { graphic: NPCbSpriteSheet.getSprite(19, 1) },
-                { graphic: NPCbSpriteSheet.getSprite(20, 1) },
-                { graphic: NPCbSpriteSheet.getSprite(21, 1) },
-                { graphic: NPCbSpriteSheet.getSprite(22, 1) },
-                { graphic: NPCbSpriteSheet.getSprite(23, 1) },
-            ],
-            frameDuration: 150
-        })
-        npcB.graphics.add("down-idle-b", downIdleB)
-
-        npcB.graphics.use(downIdleB)
-
         let npcC = new npc(
             vec(npcSpawnPointC.x + offsetX, npcSpawnPointC.y + offsetY),
-            "npcC"
+            "npcC",
+            "c"         
         )
-
-        const NPCcSpriteSheet = SpriteSheet.fromImageSource({
-            image: Resources.NPCcSpriteSheet,
-            grid: {
-                spriteWidth: 32,
-                spriteHeight: 64,
-                columns: 56,
-                rows: 20
-            }, 
-        })
-
-        const downIdleC = new Animation({
-            frames: [
-                { graphic: NPCcSpriteSheet.getSprite(18, 1) },
-                { graphic: NPCcSpriteSheet.getSprite(19, 1) },
-                { graphic: NPCcSpriteSheet.getSprite(20, 1) },
-                { graphic: NPCcSpriteSheet.getSprite(21, 1) },
-                { graphic: NPCcSpriteSheet.getSprite(22, 1) },
-                { graphic: NPCcSpriteSheet.getSprite(23, 1) },
-            ],
-            frameDuration: 150
-        })
-        npcC.graphics.add("down-idle-c", downIdleC)
-
-        npcC.graphics.use(downIdleC)
 
         // Add npc's
         this.add(npcA)

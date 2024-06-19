@@ -1,5 +1,6 @@
 import { Actor, Animation, Collider, CollisionContact, CollisionType, Color, Engine, Keys, Side, SpriteSheet, Vector, vec } from "excalibur";
 import { Resources } from "../resources";
+import { caseScene } from "../scenes/caseScene";
 
 export class Player extends Actor {
     // Propriedade do player
@@ -156,7 +157,7 @@ export class Player extends Actor {
 
         this.graphics.use(downIdle)
         
-        // Config Player para monitorar evento "hold" do teclado
+        // Configura Player para monitorar evento "hold" do teclado
         engine.input.keyboard.on("hold", (event) => {
             // Detectar qual tecla está pressionada
             switch (event.key) {
@@ -233,6 +234,43 @@ export class Player extends Actor {
                 this.vel.y = 0
                 this.graphics.use(downIdle)
             }
+        })
+
+        // Configura o player para monitorar evento "press"
+        engine.input.keyboard.on("press", (event) => {
+            if (event.key == Keys.F && this.temObjetoProximo) {
+                // identificar o alvo da interação
+                if (this.ultimoColisor?.owner.name == "mesa_stand_a") {
+                    console.log("Mesa a")
+
+                    engine.goToScene("case", {
+                        sceneActivationData: {
+                            nomeDoActor: this.ultimoColisor.owner.name
+                        }
+                    })
+                }
+                if (this.ultimoColisor?.owner.name == "mesa_stand_b") {
+                    console.log("Mesa b")
+                    engine.goToScene("case", {
+                        sceneActivationData: {
+                            nomeDoActor: this.ultimoColisor.owner.name
+                        }
+                    })
+                }
+                if (this.ultimoColisor?.owner.name == "mesa_stand_c") {
+                    console.log("Mesa c")
+                    engine.goToScene("case", {
+                        sceneActivationData: {
+                            nomeDoActor: this.ultimoColisor.owner.name
+                        }
+                    })
+                }
+            }
+        })
+
+        engine.input.keyboard.on("press", (event) => {
+            if (event.key == Keys.Esc && engine.currentSceneName == "case")
+            engine.goToScene("exposicao")
         })
     }
 
